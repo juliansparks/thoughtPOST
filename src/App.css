@@ -1,32 +1,163 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Shadows';
+  line-height: 1.4;
+}
+
+html {
+  background: #0b0c10;
+  background-image: radial-gradient(50% 30% ellipse at center top, #1f2833 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(60% 50% ellipse at center bottom, #1f2833 0%, #0b0c10 100%);
+  background-attachment: fixed;
+  color: #6cacc5;
+}
+
+@font-face {
+  src: url('./components/fonts/ShadowsIntoLight.ttf');
+  font-family: 'Shadows';
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.btn {
+  background-color: #45a29e;
+  color: #1f2833;
+  border: transparent;
+  font-family: 'SourceSans';
+  font-size: 16px;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.textbox {
+  background-color: transparent;
+  color: #66fcf1;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid  #66fcf1;
+  font-family: 'SourceSans';
+  margin-bottom: 10px;
+  resize: none;
+  width: 500px;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  background: url(./components/assets/heart.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-size: 2900%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.heart:focus {
+  outline: none;
+}
+
+.heart::-moz-focus-inner {
+  border: 0;
+}
+
+.setting-heart {
+  width: 50px;
+  height: 50px;
+  background: url(./components/assets/heart.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-size: 2900%;
+  float: left;
+
+}
+
+.setting-heart:active {
+  background-position: -1400px 0;
+  transition: background 1s steps(28);
+}
+
+.filtbtn {
+  width: 50px;
+  height: 50px;
+  background: url(./components/assets/heart.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-size: 2900%;
+  float: left;
+  margin: 5px 0px;
+}
+
+button {
+  background-color: transparent;
+  border: transparent;
+  color: #66fcf1;
+  line-height: 50px;
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.setting-btn {
+  transition: all .8s ease-in-out;
+}
+
+.setting-btn:hover {
+  transform: rotate(360deg);
+  display: inline-block;
+}
+
+.popup-content {
+  background: #1f2833 !important;
+  border: 1px solid #1f2833 !important;
+}
+
+.popup-content > div {
+  background: #1f2833 !important;
+}
+
+.mindContainer {
+  width: 70%;
+  margin: 35px auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  src: url('./components/fonts/SourceSansPro-Regular.ttf');
+  font-family: 'SourceSans';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    src: url('./components/fonts/Roboto-Light.ttf');
+    font-family: 'Roboto-Lite';
+}
+
+a:hover {
+  color: #45a29e;
+}
+
+svg:hover{
+  transform: rotate(360deg);
+}
+
+svg {
+  transition: all .8s ease-in-out;
 }
